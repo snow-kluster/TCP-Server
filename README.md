@@ -38,3 +38,9 @@ Multi-Server.cpp : code for our TCP server (allows multiple clients)
 
 Makefile : build instructions for g++ to include ws2_32.lib while building executables and where to place complied binaries 
 
+
+# Use
+Start server before starting the clients
+
+To start client pass user name as argv[1] to client, when starting client 
+`Example: client0 rohan`
