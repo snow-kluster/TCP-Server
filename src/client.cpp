@@ -17,7 +17,7 @@ int main(int argc,const char **argv){
     
     string ipaddress = "127.0.0.1";
     int port = 50000;
-    name = "["+string(argv[1])+"]:";
+    name = "["+std::string(argv[1])+"]:";
 
     WSADATA data;
     WORD ver = MAKEWORD(2,2);
@@ -48,7 +48,7 @@ int main(int argc,const char **argv){
         return 0;
     }
 
-    string my_name = "new client:" + string(argv[1]);
+    string my_name = "new client:" + std::string(argv[1]);
     send(rsocket, my_name.c_str(), my_name.length() + 1, 0);
 
     thread snd(send_msg, rsocket);
